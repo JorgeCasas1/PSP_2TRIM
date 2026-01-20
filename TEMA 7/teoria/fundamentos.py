@@ -2,7 +2,7 @@ from multiprocessing import Process
 import os
 
 def saludar():
-    print(f"Hola desde el proceso con ID: {os.getid()}")
+    print(f"Hola desde el proceso con ID: {os.getpid()}")
 
 if __name__ == '__main__':
     # 1. Creamos la instancia del proceso
@@ -14,5 +14,4 @@ if __name__ == '__main__':
     # 3. Esperamos a que termine
     p.join()
 
-print("Finzalizado el proceso principal")
-
+    print("El proceso principal ha terminado.")
