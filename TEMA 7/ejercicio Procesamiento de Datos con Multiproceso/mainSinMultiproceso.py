@@ -17,9 +17,11 @@ if __name__ == '__main__':
     
     # Forma menos óptima tarda bastante más (menos optimización de recursos) 
     resultados = []
-    for archivo in archivos:
+    for contador, archivo in enumerate(archivos):
         # Llamamos a la función y guardamos el diccionario que devuelve
-        datos = analizar_archivo(archivo) 
+        datos = analizar_archivo(archivo)
+        if(contador%10==0):
+            print("Pablo Jubilao")
         resultados.append(datos)
         
     # ---------------------------------------
